@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<style type="text/css" media="screen">
+		html,body{
+			height: 100%;
+		}
+		.row *[class^='col-'] {
+    		padding: 0px;
+		}
+		.h100{
+			height: 100%;
+		}
+		.w100{
+			width:100%;
+		}
+		.list-group-item:first-child {
+		    border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+			border-bottom-left-radius: 0px;
+		}
+		.jianting{
+			position: relative;
+		}
+		.ra{
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+			border-bottom-left-radius: 0px;
+		}
+}
+
+bootstrap.min.css:5
+
+	</style>
+</head>
+<body ng-app="dome" class="h100">
+	<div ng-controller="index" class=" h100">
+			<div class="container-fluid h100">
+				<div class="row h100 " id="d1">
+					<div id="d2">
+						<div class="btn-group btn-group-justified navbar-fixed-top" role="group" aria-label="..." id="a1">
+						  <div class="btn-group" role="group">
+						     <span class="btn btn-info ra" >点菜</button>
+						  </div>
+						  <div class="btn-group" role="group">
+						    <span class="btn btn-info ra" >评论</button>
+						  </div>
+						  <div class="btn-group" role="group">
+						     <span class="btn btn-info ra" >详情</button>
+						  </div>
+						</div>
+					</div>
+					<!-- 撑开固定顶部动态加的边距 -->
+					<div id="a2">
+					</div>
+					<div class="col-xs-2 bg-info h100 " id="d3" style="overflow :auto;">
+						<div >
+							<div class="list-group" id="s1" style=" margin-bottom: 0">
+							  <a href="#js" class="list-group-item" ng-repeat="x in data" ng-bind="x.name"></a>
+							</div>
+						</div>
+					</div>
+					<div id="d4" class="col-xs-10 h100 bg-default jianting" id="d4" style="overflow :auto;" >
+							<div class="w100 bg-success radiusx" style="margin-bottom: 0; border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;
+								color:#ccc">
+								热销
+							</div>
+								<div id="js"  ng-repeat="x in data">
+									<div style="padding-left: 1%; padding-top:1%;" class="w100" >
+										<div class="w100">
+
+											<div style="width: 35%" class="pull-left">
+												<img src="timg.jpg" alt="" class="img-responsive">
+											</div>
+												<div style="padding-left: 1%">
+												<div class=" w100">
+													<div style="margin-bottom: 1%">
+														<small><strong>卤肉饭</strong></small>	
+													</div>
+													<div style="margin-bottom: 1%">
+														<small>月销504&nbsp;赞11</small>	
+														<div class="pull-right">
+															<span class="btn btn-info btn-xs">添加</span>
+														</div>
+													</div>
+													<div style="margin-bottom: 1%; color:#46b8da;">
+														<strong>￥12</strong>
+													</div>
+													<div class="clearfix"></div>
+												</div>
+											</div>
+										</div>
+										<hr/>
+								</div>
+							</div>
+						<nav class="navbar navbar-default navbar-fixed-bottom">
+						  <div class="container text-center">
+						    	
+						  </div>
+						</nav>
+					</div>
+			</div>
+	</div>
+</body>
+</html>
